@@ -1,0 +1,250 @@
+
+   
+    :root{
+        --White: hsl(0, 0%, 100%);
+        --OffWhite: hsl(0, 0%, 94%);
+        --LightGrey: hsl(0, 0%, 86%);
+        --SmokeyGrey: hsl(0, 1%, 44%);
+        --OffBlack: hsl(0, 0%, 8%);
+        --Purple: hsl(259, 100%, 65%);
+        --Light-red: hsl(0, 100%, 67%);
+    }
+    @font-face {
+        font-family: 'Poppins';
+        src: url('assets/fonts/Poppins-Regular.ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Poppins';
+        src: url('assets/fonts/Poppins-Italic.ttf');
+        font-weight: normal;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'Poppins';
+        src: url('assets/fonts/Poppins-Bold.ttf');
+        font-weight: bold;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Poppins';
+        src: url('assets/fonts/Poppins-BoldItalic.ttf');
+        font-weight: bold;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'Poppins';
+        src: url('assets/fonts/Poppins-ExtraBold.ttf');
+        font-weight: bolder;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Poppins';
+        src: url('assets/fonts/Poppins-ExtraBoldItalic.ttf');
+        font-weight: bolder;
+        font-style: italic;
+    } 
+    *{
+        margin:0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        background-color:var(--OffWhite) ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .mainSection{
+        font-family: 'Poppins' ,sans-serif;
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    .mainDiv{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--White);
+        overflow: hidden;
+        border-radius: 20px 20px 100px 20px;
+    }
+    @media (min-width:600px) {
+        .mainDiv{
+            width: 80%;
+            border-radius: 20px 20px 200px 20px;
+        }  
+    }
+
+    @media (min-width:950px) {
+        .mainDiv{
+            width: 50%;
+        }  
+    }
+    .formDiv{
+        position: relative;
+        width: 100%;
+        display: flex;
+        margin-bottom: 50px;
+        
+    }
+    .formDiv form{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction:row;  
+        padding: 60px 20px;
+    }
+    @media (min-width:1000px) {
+        .formDiv form{
+            justify-content:left;
+        }
+        
+    }
+    
+    .formDiv form::after{
+        content:"";
+        position: absolute;
+        bottom: -2px;
+        left: 6%;
+        width: 88%;
+        height:1.6px;
+        background-color: var(--LightGrey);
+    }
+    .formDiv form .inputDiv{
+        display: flex;
+        flex-direction: column;
+        width:25%;  
+    }
+    
+    @media (min-width:1000px) {
+        .formDiv form .inputDiv{
+            width: 18%;
+            margin-left:3% ;
+        } 
+    }
+    .formDiv form .inputDiv span{
+        font-family: 'Poppins',sans-serif;
+        margin-top: 2px;
+        font-size: 9px;
+        font-weight: 300;
+        font-style: italic;
+        letter-spacing: .2px;
+        color: var(--Light-red);
+    }
+    .formDiv .submitButtonDiv{
+        position: absolute;
+        bottom: -25px; 
+        left: calc(50% - 25px); 
+        width: 50px;
+        height: 50px; 
+        border-radius: 50%; 
+        background-color: var(--Purple);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+    .formDiv .submitButtonDiv:hover{
+        background-color: var(--OffBlack);
+    }
+    @media (min-width:1000px) {
+        .formDiv .submitButtonDiv{
+            width: 70px;
+            height: 70px;
+            bottom: -35px;
+            left: calc(80% - 35px);
+        }
+        
+    }
+    .formDiv .submitButtonDiv img{
+       width: 20px; 
+    }
+
+    .formDiv form input{
+        width: 100%;
+        height: 45px;
+        border-radius: 5px;
+        box-shadow: none;
+        border: 2px solid var(--LightGrey);
+        padding: 1px 10px;
+        color: var(--OffBlack);
+        font-weight:bolder;
+        letter-spacing: 1px;
+    }
+    @media (min-width:1000px) {
+        .formDiv form input{
+            font-size: 20px;
+            height: 55px;
+        }
+        
+    }
+    .formDiv form input::placeholder{
+        color: var(--SmokeyGrey);
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    .formDiv form input:focus{
+        border: 1px solid var(--Purple);
+        outline: none;
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+    input[type=number] {
+        -moz-appearance: textfield;
+      }
+    .formDiv form label{
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: var(--SmokeyGrey);
+        margin-bottom: 4px;
+    }
+    .resultDiv{
+        width: 100%;
+        font-size: 50px;
+        font-weight:normal;
+        font-style: italic;
+        margin-bottom: 20px;
+        margin-left: 12%;
+        color: var(--OffBlack);
+    }
+    @media (min-width:500px) {
+        .resultDiv{
+            font-size: 70px;
+        }
+        
+    }
+    .resultDiv .column span{
+        color: var(--Purple);
+        margin-right: 20px;
+    } 
+    
+    .attribution { 
+        font-size: 11px; 
+        text-align: center;
+        margin-top: 10px; 
+    }
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+    .show{
+        display: inline !important;
+    }
+    .error-border{
+        border-color: var(--Light-red) !important;
+    }
+    .error-label{
+        color:var(--Light-red) !important;
+    }
