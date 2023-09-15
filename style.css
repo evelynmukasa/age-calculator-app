@@ -178,7 +178,7 @@
 
     .formDiv form input{
         width: 100%;
-        height: 45px;
+        height: 50px;
         border-radius: 5px;
         box-shadow: none;
         border: 2px solid var(--LightGrey);
@@ -186,6 +186,7 @@
         color: var(--OffBlack);
         font-weight:bolder;
         letter-spacing: 1px;
+        font-size: 15px;
     }
     @media (min-width:1200px) {
         .formDiv form input{
@@ -214,8 +215,8 @@
       }
     .formDiv form label{
         text-transform: uppercase;
-        font-size: 12px;
-        letter-spacing: 2px;
+        font-size: 13px;
+        letter-spacing: 2.3px;
         color: var(--SmokeyGrey);
         margin-bottom: 4px;
     }
