@@ -243,7 +243,8 @@
     }
     @media (min-width:1000px) {
         .resultDiv{
-            font-size: 80px;
+            line-height: 100px;
+            font-size: 90px;
         }
         
     }
