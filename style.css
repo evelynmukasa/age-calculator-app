@@ -236,6 +236,12 @@
         color: var(--OffBlack);
         line-height: 60px;
     }
+    @media(max-width:349px){
+        .resultDiv{
+            font-size: 40px;
+            line-height: 50px;
+        }
+    }
     @media (min-width:500px) {
         .resultDiv{
             line-height: 90px;
